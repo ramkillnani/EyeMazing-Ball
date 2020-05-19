@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class Win : MonoBehaviour
 {
@@ -10,5 +11,10 @@ public class Win : MonoBehaviour
 	{
 		// Sets text to the static float coin
 		coinText.text = "Coins collected: " + Coin.coins.ToString();
+	}
+
+	public void RestartGame()
+	{
+		SceneManager.LoadScene("Level1");
 	}
 }

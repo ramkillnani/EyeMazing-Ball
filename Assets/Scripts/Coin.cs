@@ -9,6 +9,7 @@ public class Coin : MonoBehaviour
 	private GameObject selectedCoin;
 
 	public static float coins = 0f;
+	public static float coinslvl2 = 0f;
 	public GameObject[] coinParent;
 	public Text coinText;
 	public PlayerController playerController;
@@ -19,6 +20,11 @@ public class Coin : MonoBehaviour
 		if (SceneManager.GetActiveScene().name == "Level1")
 		{
 			coins = 0f;
+		}
+
+		if (SceneManager.GetActiveScene().name == "Level2")
+		{
+			coins = coinslvl2;
 		}
 		// Sets the text to show the count count
 		coinText.text = "Coins: " + coins.ToString();
