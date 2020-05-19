@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.45140117, g: 0.50089204, b: 0.57231617, a: 1}
+  m_IndirectSpecularColor: {r: 0.451401, g: 0.5008942, b: 0.5723129, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -924,7 +924,7 @@ Light:
   m_InnerSpotAngle: 21.80208
   m_CookieSize: 10
   m_Shadows:
-    m_Type: 2
+    m_Type: 0
     m_Resolution: -1
     m_CustomResolution: -1
     m_Strength: 1
@@ -974,13 +974,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2113978557}
-  m_LocalRotation: {x: 0.24808373, y: 0.25108597, z: -0.07406554, w: 0.93269753}
-  m_LocalPosition: {x: 0, y: 0.37, z: -0.4}
+  m_LocalRotation: {x: 0.25881112, y: 0.00203046, z: -0.007577778, w: 0.9658961}
+  m_LocalPosition: {x: 0, y: 5, z: -2}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 2
-  m_LocalEulerAnglesHint: {x: 29.998001, y: 29.893002, z: -0.89900005}
+  m_LocalEulerAnglesHint: {x: 30, y: 0, z: -0.89900005}
 --- !u!4 &6076864340984213705
 Transform:
   m_ObjectHideFlags: 0
@@ -1053,6 +1053,7 @@ GameObject:
   - component: {fileID: 6076864340984213705}
   - component: {fileID: 6076864340984213706}
   - component: {fileID: 6076864340984213707}
+  - component: {fileID: 6076864340984213712}
   m_Layer: 0
   m_Name: Eye
   m_TagString: Player
@@ -1060,3 +1061,22 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!95 &6076864340984213712
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6076864340984213711}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: bb955fba027767a4590bc23b94a14851, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
