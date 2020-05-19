@@ -1,5 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -80,18 +79,16 @@ public class WaypointController : MonoBehaviour
 
 	void EnemyRotation()
 	{
-		#region unneeded
-		//enemy.transform.rotation = new Quaternion(enemyRigid.velocity.x * Time.deltaTime, enemyRigid.velocity.y * Time.deltaTime, enemyRigid.velocity.z * Time.deltaTime, 0);
-
+		// Gets the X speed
 		xSpeedPerSec = Vector3.Distance(xOldPos, new Vector3(enemy.transform.position.x, 0f, 0f)) / Time.deltaTime;
 		xOldPos = new Vector3(enemy.transform.position.x, 0f, 0f);
-
+		// Gets the Z speed
 		zSpeedPerSec = Vector3.Distance(zOldPos, new Vector3(0f, 0f, enemy.transform.position.z)) / Time.deltaTime;
 		zOldPos = new Vector3(0f, 0f, enemy.transform.position.z);
-
+		// Converts the speed to out of one
 		xAxisEnemy = xSpeedPerSec / 20f;
 		zAxisEnemy = zSpeedPerSec / 20f;
-
+		// Makes sure it wont go over 1 (Just to be sure)
 		if (xAxisEnemy > 1f)
 		{
 			xAxisEnemy = 1f;
@@ -101,34 +98,22 @@ public class WaypointController : MonoBehaviour
 		{
 			zAxisEnemy = 1f;
 		}
-		#endregion
-
-
 	}
 
 	private void FixedUpdate()
 	{
+		// Makes the enemy always face forward in the direction it is moving
 		Vector3 targetDirection = targetWaypoint.position - enemy.transform.position;
-
 		float singleStep = movementSpeed * Time.deltaTime;
-
 		Vector3 newDirection = Vector3.RotateTowards(enemy.transform.forward, targetDirection, singleStep, 0f);
-
 		Debug.DrawRay(enemy.transform.position, newDirection, Color.red);
-
 		enemy.transform.rotation = Quaternion.LookRotation(newDirection);
 
-
-
+		// Makes the enemy have the jumping effect
 		Vector3 moveDelta = new Vector3(0, xAxisEnemy * (movementSpeed / 2) * Time.deltaTime, zAxisEnemy * (movementSpeed / 2) * Time.deltaTime);
-
 		enemy.transform.Translate(moveDelta, Space.World);
-
 		Vector3 rotationAxis = Vector3.Cross(moveDelta.normalized, Vector3.forward);
-
 		enemy.transform.RotateAround(transform.position, rotationAxis, Mathf.Sin(moveDelta.magnitude * r * 2 * Mathf.PI) * Mathf.Rad2Deg);
-
 	}
-
 	#endregion
 }
