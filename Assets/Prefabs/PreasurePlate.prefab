@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 4130339602868545720}
   - component: {fileID: 4130339602868545721}
   - component: {fileID: 4130339602868545725}
+  - component: {fileID: 937919095}
   m_Layer: 0
   m_Name: PreasurePlate
   m_TagString: Untagged
@@ -56,6 +57,7 @@ MeshRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -67,6 +69,7 @@ MeshRenderer:
   m_ProbeAnchor: {fileID: 0}
   m_LightProbeVolumeOverride: {fileID: 0}
   m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
   m_PreserveUVs: 0
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
@@ -104,4 +107,24 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d90ba2989d42f1b4a8084747e87201dc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  trigger: {fileID: 937919095}
   door: {fileID: 0}
+--- !u!95 &937919095
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4130339602868545718}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 3047f070dce09c749b5dc596a5a807bb, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 1
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
