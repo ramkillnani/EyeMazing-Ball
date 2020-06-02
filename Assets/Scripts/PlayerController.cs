@@ -28,7 +28,7 @@ public class PlayerController : MonoBehaviour
 	{
 		if (rb.velocity.y < -20) //if the players velocity on the y axis reaches below -50 then.. 
 		{
-			SceneManager.LoadScene("Level1"); //load said scene
+			SceneManager.LoadScene("Level0"); //load said scene
 		}
 	}
 

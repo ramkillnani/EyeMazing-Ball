@@ -7,6 +7,13 @@ public class LevelControl : MonoBehaviour
 	{
 		if (other.CompareTag("Player")) //if an object with the tag 'player' collides 
 		{
+            if(SceneManager.GetActiveScene().name == "Level0")
+            {
+                Coin.coinslvl1 = Coin.coins;
+                SceneManager.LoadScene("Level1");
+            }
+
+
 			if (SceneManager.GetActiveScene().name == "Level1")
 			{
 				// Load the said scene

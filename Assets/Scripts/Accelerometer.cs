@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Accelerometer : MonoBehaviour
 {
-	public static bool supportsAccelerometer;
+    /*public static bool supportsAccelerometer;
 
 	private Rigidbody rb;
 	private Vector3 tilt;
@@ -31,5 +31,26 @@ public class Accelerometer : MonoBehaviour
 			tilt = Input.acceleration;
 			rb.AddForce(tilt.x * speed, 0, tilt.y * speed);
 		}
-	}
+	}*/
+
+    public bool isFlat = true;
+    private Rigidbody rb;
+    public float speed;
+
+    private void Start()
+    {
+        rb = GetComponent<Rigidbody>();
+        
+    }
+
+    private void Update()
+    {
+        Vector3 tilt = Input.acceleration;
+
+        if (isFlat)
+        {
+            tilt = Quaternion.Euler(90, 0, 0) * tilt;
+            rb.AddForce(tilt.x * speed, 0, tilt.z * speed);
+        }
+    }
 }

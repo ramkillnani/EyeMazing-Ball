@@ -21,7 +21,7 @@ public class Menu : MonoBehaviour
 
 	public void StartGame()
 	{
-		SceneManager.LoadScene("Level1");
+		SceneManager.LoadScene("Level0");
 	}
 
 	public void BackToMainMenu()
@@ -31,6 +31,6 @@ public class Menu : MonoBehaviour
 
 	public void RestartGame()
 	{
-		SceneManager.LoadScene("Level1");
+		SceneManager.LoadScene("Level0");
 	}
 }

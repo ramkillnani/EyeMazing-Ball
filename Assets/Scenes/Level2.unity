@@ -5038,7 +5038,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6db31f07066dc8d45b22cc3f5ec395af, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 20
+  speed: 10
   Coin: {fileID: 2039702835}
   coinName: 
 --- !u!54 &1598821954
@@ -5143,7 +5143,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d5d0f94d4b991704892e00bf8863133f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 20
+  isFlat: 1
+  speed: 12
 --- !u!1 &1604681107
 GameObject:
   m_ObjectHideFlags: 0
