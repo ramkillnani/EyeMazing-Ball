@@ -98,7 +98,7 @@ LightmapSettings:
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
   m_LightingDataAsset: {fileID: 0}
-  m_UseShadowmask: 1
+  m_UseShadowmask: 0
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -1418,6 +1418,16 @@ PrefabInstance:
       propertyPath: m_Name
       value: Goal
       objectReference: {fileID: 0}
+    - target: {fileID: 2410798988204940870, guid: ef834f6b4bd1bf74d993bd090d5067ac,
+        type: 3}
+      propertyPath: m_Size
+      value: 2.41
+      objectReference: {fileID: 0}
+    - target: {fileID: 2410798988204940872, guid: ef834f6b4bd1bf74d993bd090d5067ac,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 619a43b018e2a2e458806a11587f8060, type: 2}
     - target: {fileID: 2410798988204940874, guid: ef834f6b4bd1bf74d993bd090d5067ac,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -4694,6 +4704,11 @@ PrefabInstance:
       propertyPath: door
       value: 
       objectReference: {fileID: 1221805847}
+    - target: {fileID: 4130339602868545725, guid: d072ed1e5daec084682697c8e520bfc6,
+        type: 3}
+      propertyPath: changeDisolve
+      value: 
+      objectReference: {fileID: 2100000, guid: b13b2f897f5210f4b94c6f020d4918d4, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d072ed1e5daec084682697c8e520bfc6, type: 3}
 --- !u!1 &1350601227
@@ -5038,7 +5053,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6db31f07066dc8d45b22cc3f5ec395af, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 10
+  speed: 11
   Coin: {fileID: 2039702835}
   coinName: 
 --- !u!54 &1598821954
@@ -5144,7 +5159,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isFlat: 1
-  speed: 14
+  speed: 15
 --- !u!1 &1604681107
 GameObject:
   m_ObjectHideFlags: 0
